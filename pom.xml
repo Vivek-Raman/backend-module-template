@@ -50,13 +50,13 @@
 			</dependency>
 			<dependency>
 				<groupId>dev.vivekraman</groupId>
-				<artifactId>template</artifactId>
-				<version>${project.version}</version>
+				<artifactId>monolith-model</artifactId>
+				<version>${monolith-common.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>dev.vivekraman</groupId>
-				<artifactId>monolith-model</artifactId>
-				<version>${monolith-common.version}</version>
+				<artifactId>template</artifactId>
+				<version>${project.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
