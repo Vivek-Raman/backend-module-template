@@ -82,7 +82,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub - Vivek Raman - Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/Vivek-Raman/monolith-common</url>
+			<url>https://maven.pkg.github.com/Vivek-Raman/backend-module-template</url>
 		</repository>
 	</distributionManagement>
 </project>
