@@ -78,6 +78,14 @@
 		</plugins>
 	</build>
 
+	<repositories>
+		<repository>
+			<id>github</id>
+			<name>GitHub - Vivek Raman - monolith-common</name>
+			<url>https://maven.pkg.github.com/Vivek-Raman/monolith-common</url>
+		</repository>
+	</repositories>
+
 	<distributionManagement>
 		<repository>
 			<id>github</id>
