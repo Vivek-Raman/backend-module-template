@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Scheduler;
 
 @RestController
-@RequestMapping(Constants.MODULE_NAME)
+@RequestMapping("/" + Constants.MODULE_NAME)
 @RequiredArgsConstructor
 public class TestController {
   private final Scheduler scheduler;
