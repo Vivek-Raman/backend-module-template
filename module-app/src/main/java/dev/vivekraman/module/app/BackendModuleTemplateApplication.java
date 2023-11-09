@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = "dev.vivekraman.*")
-public class BackendModuleTemplateApplication {
+public class BackendModuleTemplateApplication { // TODO: update class name
 	public static void main(String[] args) {
 		SpringApplication.run(BackendModuleTemplateApplication.class, args);
 	}

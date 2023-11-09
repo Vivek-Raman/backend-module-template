@@ -6,13 +6,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource(value = "classpath:" + Constants.MODULE_NAME + ".properties")
-public class ModuleConfig {
+public class ModuleConfig { // TODO: update class name
   @Bean
-  public GroupedOpenApi moduleApiGroup() {
+  public GroupedOpenApi moduleApiGroup() { // TODO: update method name
     return GroupedOpenApi.builder()
         .group(Constants.MODULE_NAME)
-        .packagesToScan("dev.vivekraman.module.controller")
+        .packagesToScan("dev.vivekraman.module.controller") // TODO: update package path
         .build();
   }
 }
