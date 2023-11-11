@@ -5,12 +5,10 @@ import dev.vivekraman.monolith.annotation.MonolithController;
 import dev.vivekraman.monolith.model.Response;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Scheduler;
 
 @MonolithController(moduleName = Constants.MODULE_NAME)
-@RequestMapping("/" + Constants.MODULE_NAME)
 @RequiredArgsConstructor
 public class TestController {
   private final Scheduler scheduler;
