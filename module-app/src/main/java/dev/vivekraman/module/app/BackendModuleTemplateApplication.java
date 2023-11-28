@@ -1,4 +1,4 @@
-package dev.vivekraman.module.app;
+package dev.vivekraman.module.app; // TODO: update package path
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
