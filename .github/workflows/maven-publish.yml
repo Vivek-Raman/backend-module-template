@@ -30,7 +30,18 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
 
+    - name: maven-settings-action
+      uses: s4u/maven-settings-action@v3.0.0
+      with:
+        githubServer: false
+        servers: |
+          [{
+            "id": "github",
+            "username": "${{ secrets.PUBLISH_USERNAME }}",
+            "password": "${{ secrets.PUBLISH_TOKEN }}"
+          }]
+
     - name: Publish to GitHub Packages - Apache Maven
       run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ secrets.PUBLISH_TOKEN }}

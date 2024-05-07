@@ -11,7 +11,7 @@
 	<groupId>dev.vivekraman</groupId>
 	<artifactId>backend-module-template</artifactId> <!-- TODO: update parent artifact ID -->
 <!--	<version>1.0-rc1</version>-->
-	<version>2.0-rc1</version> <!-- TODO: remove this and uncomment the above line -->
+	<version>2.0-rc2</version> <!-- TODO: remove this and uncomment the above line -->
 	<packaging>pom</packaging>
 	<name>backend-module-template</name> <!-- TODO: update parent artifact name -->
 	<description>Template backend module to be used with monolith-platform</description> <!-- TODO: update description -->
@@ -21,7 +21,7 @@
 	</modules>
 	<properties>
 		<java.version>21</java.version>
-		<monolith-common.version>2.0-rc2</monolith-common.version>
+		<monolith-common.version>2.0-rc4</monolith-common.version>
 		<springdoc.version>2.1.0</springdoc.version>
 	</properties>
 	<dependencies>
@@ -70,16 +70,16 @@
 	<repositories>
 		<repository>
 			<id>github</id>
-			<name>GitHub - Vivek Raman - monolith-common</name>
-			<url>https://maven.pkg.github.com/Vivek-Raman/monolith-common</url>
+			<name>GitHub - Vivek Raman</name>
+			<url>https://maven.pkg.github.com/Vivek-Raman/artifacts</url>
 		</repository>
 	</repositories>
 
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<name>GitHub - Vivek Raman - Apache Maven Packages</name> <!-- TODO: update ~/m2/settings.xml to include the new repository -->
-			<url>https://maven.pkg.github.com/Vivek-Raman/backend-module-template</url> <!-- TODO: update repository ID -->
+			<name>GitHub - Vivek Raman - Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/Vivek-Raman/artifacts</url>
 		</repository>
 	</distributionManagement>
 </project>
