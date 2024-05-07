@@ -7,7 +7,7 @@
     <groupId>dev.vivekraman</groupId>
     <artifactId>backend-module-template</artifactId> <!-- TODO: update parent artifact ID -->
 <!--    <version>1.0-rc1</version>-->
-    <version>1.4-rc1</version> <!-- TODO: remove this and uncomment the above line -->
+    <version>2.0-rc1</version> <!-- TODO: remove this and uncomment the above line -->
   </parent>
 
   <artifactId>module-app</artifactId> <!-- TODO: update module app artifact ID -->

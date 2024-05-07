@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.3</version>
+		<version>3.1.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.vivekraman</groupId>
 	<artifactId>backend-module-template</artifactId> <!-- TODO: update parent artifact ID -->
 <!--	<version>1.0-rc1</version>-->
-	<version>1.4-rc1</version> <!-- TODO: remove this and uncomment the above line -->
+	<version>2.0-rc1</version> <!-- TODO: remove this and uncomment the above line -->
 	<packaging>pom</packaging>
 	<name>backend-module-template</name> <!-- TODO: update parent artifact name -->
 	<description>Template backend module to be used with monolith-platform</description> <!-- TODO: update description -->
@@ -20,8 +20,8 @@
 		<module>module-app</module> <!-- TODO: update module app name -->
 	</modules>
 	<properties>
-		<java.version>17</java.version>
-		<monolith-common.version>1.2-rc3</monolith-common.version>
+		<java.version>21</java.version>
+		<monolith-common.version>2.0-rc2</monolith-common.version>
 		<springdoc.version>2.1.0</springdoc.version>
 	</properties>
 	<dependencies>
