@@ -9,15 +9,14 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.vivekraman</groupId>
-	<artifactId>backend-module-template</artifactId> <!-- TODO: update parent artifact ID -->
-<!--	<version>1.0-rc1</version>-->
-	<version>2.0-rc2</version> <!-- TODO: remove this and uncomment the above line -->
+	<artifactId>backend-module-template</artifactId>
+	<version>2.0-rc2</version>
 	<packaging>pom</packaging>
-	<name>backend-module-template</name> <!-- TODO: update parent artifact name -->
+	<name>backend-module-template</name>
 	<description>Template backend module to be used with monolith-platform</description> <!-- TODO: update description -->
 	<modules>
-		<module>template</module> <!-- TODO: update module name -->
-		<module>module-app</module> <!-- TODO: update module app name -->
+		<module>template</module>
+		<module>module-app</module>
 	</modules>
 	<properties>
 		<java.version>21</java.version>
@@ -61,7 +60,7 @@
 			</dependency>
 			<dependency>
 				<groupId>dev.vivekraman</groupId>
-				<artifactId>template</artifactId> <!-- TODO: update module artifact ID -->
+				<artifactId>template</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		</dependencies>

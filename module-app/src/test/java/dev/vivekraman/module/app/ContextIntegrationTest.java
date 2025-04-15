@@ -1,4 +1,4 @@
-package dev.vivekraman.module.app; // TODO: move to same package as main class
+package dev.vivekraman.module.app;
 
 import dev.vivekraman.module.app.base.BaseTestSuite;
 import org.junit.jupiter.api.Test;

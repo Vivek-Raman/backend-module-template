@@ -1,4 +1,4 @@
-package dev.vivekraman.module.app.base;  // TODO: move to same package as main class
+package dev.vivekraman.module.app.base;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;

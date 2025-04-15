@@ -5,12 +5,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class ModuleConfig { // TODO: update class name
+public class ModuleConfig {
   @Bean
-  public GroupedOpenApi moduleApiGroup() { // TODO: update method name
+  public GroupedOpenApi moduleApiGroup() {
     return GroupedOpenApi.builder()
         .group(Constants.MODULE_NAME)
-        .packagesToScan("dev.vivekraman.module.controller") // TODO: update package path
+        .packagesToScan("dev.vivekraman.module.controller")
         .build();
   }
 }
