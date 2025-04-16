@@ -96,10 +96,10 @@ def main():
       return
 
   print(f'Updating version numbers...')
-  find_and_replace(args, './module-app/pom.xml', '<version>.+</version>', f'<version>{target_version}</version>')
-  find_and_replace(args, './template/pom.xml', '<version>.+</version>', f'<version>{target_version}</version>')
-  find_and_replace(args, './pom.xml', '<version>.+</version>', f'<version>{target_version}</version>')
-  find_and_replace(args, './pom.xml', '\t\t<version>.+</version>', f'    <version>{spring_boot_version}</version>')
+  find_and_replace(args, './module-app/pom.xml', '<version>[rc\\d\\-\\.]+</version>', f'<version>{target_version}</version>')
+  find_and_replace(args, './template/pom.xml', '<version>[rc\\d\\-\\.]+</version>', f'<version>{target_version}</version>')
+  find_and_replace(args, './pom.xml', '<version>[rc\\d\\-\\.]+</version>', f'<version>{target_version}</version>')
+  find_and_replace(args, './pom.xml', '<artifactId>spring-boot-starter-parent</artifactId>\\n\\t\\t<version>[rc\\d\\-\\.]+</version>', f'<artifactId>spring-boot-starter-parent</artifactId>\\n\\t\\t<version>{spring_boot_version}</version>')
 
   print(f'Updating parent artifact IDs...')
   find_and_replace(args, './module-app/pom.xml', '<artifactId>backend-module-template</artifactId>', f'<artifactId>backend-module-{args.name}</artifactId>')
@@ -136,7 +136,11 @@ def main():
   find_and_replace(args, './module-app/src/', 'SpringApplication.run(BackendModuleTemplateApplication.class, args)', f'SpringApplication.run(BackendModule{get_upper_camel_case(args.name)}Application.class, args);')
 
   print(f'Updating properties...')
-  find_and_replace(args, './module-app/src/', 'spring.profiles.include=module', f'spring.profiles.include=module{args.name}')
+  find_and_replace(args, './module-app/src/', 'spring.profiles.include=module', f'spring.profiles.include={args.name}')
+
+  print(f'Renaming classes...')
+  rename(args, './template/src/main/java/dev/vivekraman/module/config/ModuleConfig.java', f'{get_upper_camel_case(args.name)}Config.java')
+  rename(args, './module-app/src/main/java/dev/vivekraman/module/app/BackendModuleTemplateApplication.java', f'BackendModule{get_upper_camel_case(args.name)}Application.java')
 
   print(f'Renaming class directories...')
   rename(args, './module-app/src/main/java/dev/vivekraman/module', get_directory_name(args.name))
