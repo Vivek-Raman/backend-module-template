@@ -128,12 +128,12 @@ def main():
   find_and_replace(args, './template/src/', 'import dev.vivekraman.module', f'import dev.vivekraman.{get_package_name(args.name)}')
 
   print(f'Updating classes...')
-  find_and_replace(args, './template/src/', 'public GroupedOpenApi moduleApiGroup()', f'public GroupedOpenApi {get_lower_camel_case(args.name)}ApiGroup()')
-  find_and_replace(args, './template/src/', '.packagesToScan("dev.vivekraman.module.controller")', f'.packagesToScan("dev.vivekraman.{get_package_name(args.name)}.controller")')
+  find_and_replace(args, './template/src/', 'public GroupedOpenApi moduleApiGroup\(\)', f'public GroupedOpenApi {get_lower_camel_case(args.name)}ApiGroup()')
+  find_and_replace(args, './template/src/', '.packagesToScan\("dev.vivekraman.module.controller"\)', f'.packagesToScan("dev.vivekraman.{get_package_name(args.name)}.controller")')
   find_and_replace(args, './template/src/', 'public class ModuleConfig', f'public class {get_upper_camel_case(args.name)}Config')
   find_and_replace(args, './template/src/', 'String MODULE_NAME = "module";', f'String MODULE_NAME = "{args.name}";')
   find_and_replace(args, './module-app/src/', 'public class BackendModuleTemplateApplication', f'public class BackendModule{get_upper_camel_case(args.name)}Application')
-  find_and_replace(args, './module-app/src/', 'SpringApplication.run(BackendModuleTemplateApplication.class, args)', f'SpringApplication.run(BackendModule{get_upper_camel_case(args.name)}Application.class, args);')
+  find_and_replace(args, './module-app/src/', 'SpringApplication.run\(BackendModuleTemplateApplication.class, args\)', f'SpringApplication.run(BackendModule{get_upper_camel_case(args.name)}Application.class, args);')
 
   print(f'Updating properties...')
   find_and_replace(args, './module-app/src/', 'spring.profiles.include=module', f'spring.profiles.include={args.name}')
